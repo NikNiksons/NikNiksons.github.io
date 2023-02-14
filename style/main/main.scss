@@ -1,0 +1,1560 @@
+@import '../base/base';
+@import '../base/mixins';
+@import '../base/varibles';
+@import '../fonts/fonts';
+
+@media (min-width:768px) {
+    .navbar {
+        width: 100%;
+        height: 700px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        background-image: url('../images/Bitmap.png');
+        background-repeat: no-repeat;
+        background-position: center;
+        position: relative;
+
+        ::after {
+            content: "";
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 4px;
+            z-index: -4;
+            background: rgba(0, 0, 0, 1);
+            opacity: 0.8;
+        }
+
+        &__menu {
+            width: 80%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            clear: both;
+            margin: 40px auto 147px;
+            padding: 0 148px 0 104px;
+
+            .navigation {
+                display: block;
+                justify-content: center;
+                align-items: center;
+                @include fonts($f-monst-bold, 20px, 700, 24.38px, $text-white);
+            }
+
+            .wrapper {
+                width: 152px;
+                display: flex;
+                justify-content: space-between;
+
+                &__login,
+                &__signup {
+                    width: max-content;
+                    @include fonts($f-monst-regul, 14px, 400, 17.7px, $text-white);
+                    cursor: pointer;
+
+                    transition-duration: 0.5ms;
+
+                    &:hover {
+                        color: rgb(248, 208, 156);
+                    }
+                }
+
+                &__signup {
+                    display: flex;
+                    align-items: center;
+                    border: 2px solid $text-white;
+                    border-radius: $br-radius;
+                    padding: 8px 16px;
+                }
+
+                &__login {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+            }
+        }
+
+        &__text {
+            text-align: center;
+
+            .text-1 {
+                @include fonts($f-monst-bold, 52px, 700, 63.39px, $text-white );
+                text-align: center;
+            }
+
+            .text-2 {
+                @include fonts($f-roboto-light, 24px, 300, 24.5px, $text-white );
+                text-align: center;
+                margin: 28.5px auto 32px;
+            }
+
+            .btn {
+                @include fonts($f-monst-bold, 14px, 700, 17.07px, $text-white );
+                background-color: $color-red;
+                border-radius: $br-radius;
+                text-align: center;
+                transition-duration: 0.4ms;
+                padding: 12px 19px;
+
+                &:hover {
+
+                    background-color: rgb(246, 63, 66);
+                    color: rgb(248, 208, 156);
+                }
+            }
+        }
+    }
+
+    // <Meet a partner for your best holiday>
+    .card {
+        width: 65.4%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin: 89px auto;
+
+        &_name {
+            display: block;
+            width: 100%;
+            @include fonts($f-monst-bold, 26px, 700, 31.69px, rgba(68, 68, 68, 1));
+            text-align: center;
+            clear: both;
+            margin: 0 auto 35px;
+        }
+
+        &__card-1,
+        &__card-2,
+        &__card-3 {
+            width: 32%;
+            height: 400px;
+            background-image: url('../images/Bitmap step-1.png');
+            background-repeat: no-repeat;
+            background-position: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: flex-end;
+            padding: 0 25px 21px;
+            position: relative;
+
+            ::after {
+                content: "";
+                display: block;
+                position: absolute;
+                top: 0;
+                left: 0;
+                bottom: 0;
+                width: 100%;
+                height: 100%;
+                border-radius: 4px;
+                z-index: -1;
+                background: linear-gradient(180deg, rgba(0, 0, 0, 0.0001) 0%, rgba(0, 0, 0, 0.6) 100%);
+                opacity: 0.2;
+            }
+        }
+
+        &__card-1 {
+            background-image: url('../images/Bitmap step-1.png');
+        }
+
+        &__card-2 {
+            background-image: url('../images/Bitmap step-2.png');
+
+            .card-text-1 {
+                margin: 22px 0 17px;
+            }
+        }
+
+        &__card-3 {
+            background-image: url('../images/Bitmap step-3.png');
+        }
+    }
+
+    .card-text-1 {
+        @include fonts($f-monst-bold, 24px, 700, 26px, $text-white );
+        margin: 20px 0 23px;
+    }
+
+    .card-text-2 {
+        @include fonts($f-roboto-light, 14px, 300, 14px, $text-grej);
+    }
+
+    .card-btn {
+        width: 70px;
+        height: 20px;
+        @include fonts($f-monst-regul, 10px, 400, 12.19px, $text-white );
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        background-color: $color-red;
+        border-radius: $br-radius;
+        text-align: center;
+        cursor: pointer;
+    }
+
+    .card-img {
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        position: relative;
+    }
+
+    // <div class="card_name-meet">Meet a partner for your best holiday</div>
+    .width {
+        width: 65.5%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-content: space-between;
+        margin: 33px auto 38px;
+
+        .brendon_1,
+        .marie_2,
+        .diana_3,
+        .christopher_4 {
+            width: 24%;
+            position: relative;
+            text-align: center;
+
+            ::after {
+                content: '';
+                position: absolute;
+                display: block;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 38px;
+                height: 38px;
+                right: 21%;
+                bottom: 44%;
+                background-color: rgb(255, 78, 80);
+                border: 4px solid #fff;
+                border-radius: 50%;
+            }
+        }
+
+        .last-name {
+            @include fonts($f-monst-bold, 14px, 700, 17.07px, $text-black);
+            margin: 19px 0 22px
+        }
+
+        .brendon_1 {
+            ::after {
+                content: url('../images/music1.png');
+            }
+        }
+
+        .marie_2 {
+            ::after {
+                content: url('../images/brush-2.png');
+                background-color: rgba(25, 212, 202, 1);
+            }
+        }
+
+        .diana_3 {
+
+            .hobby {
+                justify-self: center;
+                margin: 0 -6px 0 6px;
+            }
+
+            .last-name {
+                margin-bottom: 26px;
+            }
+
+            ::after {
+                content: url('../images/camera-3.png');
+                background-color: rgba(255, 167, 16, 1);
+            }
+        }
+
+        .christopher_4 {
+            padding-left: 4px;
+
+            .last-name {
+                margin-bottom: 27px;
+                padding-left: 4px;
+            }
+
+            ::after {
+                content: url('../images/airplane-4.png');
+                background-color: rgba(102, 125, 243, 1);
+            }
+        }
+    }
+
+    .hobby {
+        @include fonts($f-roboto-light, 14px, 300, 14px, rgba(153, 153, 153, 1));
+        margin: 0 0.85px
+    }
+
+    .btn-perent {
+        width: 180px;
+        height: 40px;
+        @include fonts($f-monst-bold, 14px, 700, 17.07px, $text-white );
+        border: 2px solid $color-red;
+        border-radius: $br-radius;
+        text-align: center;
+        color: $color-red;
+        transition-duration: 0.9ms;
+        transition-property: all;
+        margin: 0 0 55px;
+        cursor: pointer;
+
+        &:hover {
+            background-color: rgb(255, 247, 247);
+            color: rgb(248, 208, 156);
+        }
+    }
+
+    // <section class="holiday">
+    .holyday {
+        height: 1040px;
+    }
+
+    .mb-10 {
+        margin-bottom: 19px;
+    }
+
+    figure {
+        position: relative;
+        z-index: 2;
+
+        .z-index {
+            @include fonts($f-monst-bold, 22px, 700, 26.82px, $text-white );
+            position: absolute;
+            top: 45%;
+            left: 40%;
+            z-index: 4;
+        }
+    }
+
+    .discover-img::after {
+        content: '';
+        display: block;
+        position: absolute;
+        justify-content: center;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 4px;
+        z-index: 1;
+        background-color: rgba(0, 0, 0, 1);
+        opacity: 0.2;
+    }
+
+    .discover-img_1 .z-index {
+        left: 16%;
+    }
+
+
+    .discover-img_2 .z-index {
+        left: 10%;
+    }
+
+    .discover-img_3 .z-index {
+        width: 187px;
+        height: 54px;
+        text-align: center;
+        top: 40%;
+        left: 18%;
+    }
+
+    .discover-img_4 .z-index {
+        left: 37%;
+    }
+
+    .discover-img_5 .z-index {
+        left: 29%;
+    }
+
+    .discover-img_6 .z-index {
+        left: 28%;
+    }
+
+    .discover-img_7 .z-index {
+        left: 30%;
+    }
+
+    // <section class="input">
+    .input {
+        width: 482px;
+        height: 158px;
+        text-align: center;
+        margin: 86px auto 106px;
+
+        &_text {
+            @include fonts($f-roboto-light, 18px, 300, 14px, rgba(102, 102, 102, 1));
+            margin: 55px 0 25px;
+            text-align: center
+        }
+
+        &_text-center {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: nowrap
+        }
+    }
+
+    .input-holiday {
+        @include fonts($f-roboto-light, 14px, 300, 16.41px, rgba(153, 153, 153, 1));
+        width: 299px;
+        height: 40px;
+        padding-left: 13px;
+        border: 1px solid rgba(0, 0, 0, 0.07);
+    }
+
+    .btn-holiday {
+        width: 172.12px;
+        height: 40px;
+        @include fonts($f-monst-bold, 14px, 700, 17.07px, $text-white );
+        border: 2px solid $color-red;
+        border-radius: $br-radius;
+        text-align: center;
+        background-color: $color-red;
+        color: $color-255;
+        transition-duration: 0.9ms;
+        transition-property: all;
+
+        :hover {
+            color: red;
+        }
+    }
+
+    hr {
+        margin: 10px 0 38px;
+        border: 1px solid red;
+    }
+
+    // <footer class="d-flex ">
+    footer {
+        height: 224px;
+        width: 65.8%;
+        margin: 0 auto;
+
+        .col {
+            width: 25%;
+            text-align: left;
+        }
+
+        .col-1 {
+            @include fonts($f-monst-regul, 16px, 400, 19.5px, $color-red);
+            text-transform: uppercase;
+            padding-left: 3px;
+        }
+
+        .col-2>ul:nth-last-child(-n+6) {
+            @include fonts($f-roboto-light, 14px, 300, 26px, $text-grej-more);
+            padding-left: 7px;
+
+            li:nth-child(1) {
+                @include fonts($f-monst-bold, 14px, 700, 17.07px, $text-black );
+                padding-bottom: 11px;
+            }
+        }
+
+        .col-3>ul>li:nth-child(n) {
+            @include fonts($f-monst-bold, 14px, 700, 17.07px, $text-black );
+            padding-left: 9px;
+        }
+
+        .col-4 {
+            text-align: right;
+
+            ul>li:nth-child(1) {
+                @include fonts($f-monst-bold, 10px, 700, 12.19px, rgba(204, 204, 204, 1));
+                letter-spacing: 1px;
+                text-transform: uppercase;
+            }
+
+            .areto {
+                width: 110px;
+                height: 24px;
+                margin: 7px 0 0 123px;
+            }
+        }
+    }
+}
+
+@media (max-width:970px) {
+    .navbar {
+        width: 100%;
+        height: 700px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        background-image: url('../images/Bitmap.png');
+
+        &__menu {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            clear: both;
+            margin: 40px auto 147px;
+            padding: 0 50px 0 48px;
+
+            .wrapper {
+                width: 152px;
+                display: flex;
+                justify-content: space-between;
+
+                &__login,
+                &__signup {
+                    width: max-content;
+                    @include fonts($f-monst-regul, 14px, 400, 17.7px, $text-white);
+                    cursor: pointer;
+                    transition-duration: 0.5ms;
+
+                    &:hover {
+                        color: rgb(248, 208, 156);
+                    }
+                }
+
+                &__signup {
+                    display: flex;
+                    align-items: center;
+                    border: 2px solid $text-white;
+                    border-radius: $br-radius;
+                    padding: 8px 16px;
+                }
+
+                &__login {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+            }
+        }
+
+        &__text {
+            text-align: center;
+
+            .text-1 {
+                @include fonts($f-monst-bold, 52px, 700, 63.39px, $text-white );
+                text-align: center;
+            }
+
+            .text-2 {
+                @include fonts($f-roboto-light, 24px, 300, 24.5px, $text-white );
+                text-align: center;
+                margin: 28.5px auto 32px;
+            }
+
+            .btn {
+                @include fonts($f-monst-bold, 14px, 700, 17.07px, $text-white );
+                background-color: $color-red;
+                border-radius: $br-radius;
+                text-align: center;
+                transition-duration: 0.4ms;
+                padding: 12px 19px;
+
+                &:hover {
+                    background-color: rgb(246, 63, 66);
+                    color: rgb(248, 208, 156);
+                }
+            }
+        }
+    }
+
+    // <Meet a partner for your best holiday>
+    .card {
+        width: 98.4%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin: 95px auto;
+
+        &_name {
+            display: block;
+            width: 100%;
+            @include fonts($f-monst-bold, 22px, 700, 26.82px, rgba(68, 68, 68, 1));
+            text-align: center;
+            clear: both;
+            margin: 0 auto 35px;
+        }
+
+        &__card-1,
+        &__card-2,
+        &__card-3 {
+            width: 32%;
+            height: 400px;
+            background-repeat: no-repeat;
+            background-position: -4%;
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: flex-end;
+            padding: 0 23px 17px;
+            position: relative;
+
+
+            ::after {
+                content: "";
+                display: block;
+                position: absolute;
+                top: 0;
+                left: 0;
+                bottom: 0;
+                width: 100%;
+                height: 100%;
+                border-radius: 4px;
+                z-index: -1;
+                background: linear-gradient(180deg, rgba(0, 0, 0, 0.0001) 0%, rgba(0, 0, 0, 0.6) 100%);
+                opacity: 0.2;
+            }
+        }
+
+        &__card-1 {
+            background-image: url('../images/Bitmap step-1.png');
+        }
+
+        &__card-2 {
+            background-image: url('../images/Bitmap step-2.png');
+
+            .card-text-1 {
+                margin: 15px 0 23px;
+            }
+        }
+
+        &__card-3 {
+            background-image: url('../images/Bitmap step-3.png');
+        }
+    }
+
+
+
+    .card-text-1 {
+        @include fonts($f-monst-bold, 24px, 700, 14px, $text-white );
+        margin: 46px 0 29px;
+        z-index: 4;
+    }
+
+    .card-text-2 {
+        @include fonts($f-roboto-light, 14px, 300, 14px, $text-grej);
+        z-index: 4;
+    }
+
+    .card-btn {
+        width: 70px;
+        height: 20px;
+        @include fonts($f-monst-regul, 10px, 400, 12.19px, $text-white );
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        background-color: $color-red;
+        border-radius: $br-radius;
+        text-align: center;
+        cursor: pointer;
+    }
+
+    // <div class="card_name-meet">Meet a partner for your best holiday</div>
+    .width {
+        width: 65.5%;
+        height: 490px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-content: space-between;
+        margin: 33px auto 13px;
+
+        .card-img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            position: relative;
+        }
+
+        .brendon_1,
+        .marie_2,
+        .diana_3,
+        .christopher_4 {
+            width: 49%;
+            height: 233px;
+            position: relative;
+            text-align: center;
+
+            ::after {
+                content: '';
+                position: absolute;
+                display: block;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 38px;
+                height: 38px;
+                right: 60px;
+                bottom: 110px;
+                background-color: rgb(255, 78, 80);
+                border: 4px solid #fff;
+                border-radius: 50%;
+            }
+        }
+
+        .last-name {
+            @include fonts($f-monst-bold, 14px, 700, 17.07px, $text-black);
+            margin: 17px 0 22px
+        }
+
+        .brendon_1 {
+            ::after {
+                content: url('../images/music1.png');
+            }
+        }
+
+        .marie_2 {
+            order: 1;
+
+            ::after {
+                content: url('../images/brush-2.png');
+                background-color: rgba(25, 212, 202, 1);
+            }
+        }
+
+        .diana_3 {
+            .hobby {
+                justify-self: center;
+                margin: 0 7px 0 6px;
+            }
+
+            .last-name {
+                margin-bottom: 26px;
+            }
+
+            ::after {
+                content: url('../images/camera-3.png');
+                background-color: rgba(255, 167, 16, 1);
+            }
+        }
+
+        .christopher_4 {
+            padding-left: 0px;
+            order: 1;
+
+            .last-name {
+                margin-bottom: 23px;
+                padding-left: 0px;
+            }
+
+            ::after {
+                content: url('../images/airplane-4.png');
+                background-color: rgba(102, 125, 243, 1);
+            }
+        }
+    }
+
+    .hobby {
+        @include fonts($f-roboto-light, 14px, 300, 14px, rgba(153, 153, 153, 1));
+        margin: 0 2.95px
+    }
+
+    .btn-perent {
+        width: 180px;
+        height: 40px;
+        @include fonts($f-monst-bold, 14px, 700, 17.07px, $text-white );
+        border: 2px solid $color-red;
+        border-radius: $br-radius;
+        text-align: center;
+        color: $color-red;
+        transition-duration: 0.9ms;
+        transition-property: all;
+        margin: 0 0 61px;
+        padding: 0 23px;
+        cursor: pointer;
+
+        &:hover {
+            background-color: rgb(255, 247, 247);
+            color: rgb(248, 208, 156);
+        }
+    }
+
+    // <section class="holiday">
+    .holyday {
+        height: 1031px;
+
+        .width {
+            width: 100%;
+            justify-content: space-around;
+
+            .mb-10 {
+                margin-bottom: 13px;
+            }
+        }
+    }
+
+    figure {
+        position: relative;
+        z-index: 2;
+
+        .z-index {
+            @include fonts($f-monst-bold, 22px, 700, 26.82px, $text-white );
+            position: absolute;
+            top: 45%;
+            left: 40%;
+            z-index: 4;
+        }
+    }
+
+    *.discover-img {
+        img {
+            display: none;
+            border-radius: 4px;
+        }
+    }
+
+    .discover-img::after {
+        content: '';
+        display: block;
+        position: absolute;
+        justify-content: center;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 4px;
+        z-index: 1;
+        background-color: rgba(0, 0, 0, 1);
+        opacity: 0.2;
+    }
+
+    .discover-img_1 {
+        width: 30%;
+        height: 30%;
+        background-image: url('../images/discover-sport-1.png');
+        background-repeat: no-repeat;
+        background-position: 61%;
+
+        .z-index {
+            width: 206px;
+            text-align: center;
+            left: 5%;
+            top: 37%;
+        }
+    }
+
+    .discover-img_2 {
+        width: 30%;
+        height: 30%;
+        background-image: url('../images/discover-willnes.png');
+        background-repeat: no-repeat;
+        background-position: 61%;
+
+        .z-index {
+            width: 206px;
+            text-align: center;
+            left: 5%;
+            top: 41%;
+        }
+    }
+
+    .discover-img_3 {
+        width: 30%;
+        height: 30%;
+        background-image: url('../images/discover-extreme-3.png');
+        background-repeat: no-repeat;
+        background-position: 33%;
+
+        .z-index {
+            width: 187px;
+            height: 54px;
+            text-align: center;
+            top: 41%;
+            left: 9%;
+        }
+    }
+
+    .discover-img_4 {
+        width: 31%;
+        height: 30%;
+        background-image: url('../images/discover-game-4.png');
+        background-repeat: no-repeat;
+        background-position: 48%;
+
+        .z-index {
+            left: 33%;
+        }
+    }
+
+    .discover-img_5 {
+        width: 64%;
+        height: 30%;
+        background-image: url('../images/discover-culture-5.png');
+        background-repeat: no-repeat;
+        background-position: 55%;
+
+        .z-index {
+            top: 46%;
+            left: 23.5%;
+        }
+    }
+
+    .discover-img_6 {
+        width: 64%;
+        height: 30%;
+        background-image: url('../images/discover-enjomet-6.png');
+        background-repeat: no-repeat;
+        background-position: -1%;
+
+        .z-index {
+            top: 46%;
+            left: 22%;
+        }
+    }
+
+    .discover-img_7 {
+        width: 31%;
+        height: 30%;
+        background-image: url('../images/discover-trevelling-7-tablet.png');
+        background-repeat: no-repeat;
+        background-position: 61%;
+
+        .z-index {
+            top: 45.5%;
+            left: 26.5%;
+        }
+    }
+
+    // <section class="input">
+    .input {
+        width: 482px;
+        height: 158px;
+        text-align: center;
+        margin: 92px auto 103px;
+
+        &_text {
+            @include fonts($f-roboto-light, 18px, 300, 14px, rgba(102, 102, 102, 1));
+            margin: 55px 0 25px;
+            text-align: center
+        }
+
+        &_text-center {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: nowrap
+        }
+    }
+    .input-holiday {
+        @include fonts($f-roboto-light, 14px, 300, 16.41px, rgba(153, 153, 153, 1));
+        width: 299px;
+        height: 40px;
+        padding-left: 13px;
+        border: 1px solid rgba(0, 0, 0, 0.07);
+    }
+
+    .btn-holiday {
+        width: 172.12px;
+        height: 40px;
+        @include fonts($f-monst-bold, 14px, 700, 17.07px, $text-white );
+        border: 2px solid $color-red;
+        border-radius: $br-radius;
+        text-align: center;
+        background-color: $color-red;
+        color: $color-255;
+        transition-duration: 0.9ms;
+        transition-property: all;
+
+        :hover {
+            color: red;
+        }
+    }
+
+    // <footer class="d-flex ">
+    footer {
+        height: 224px;
+        width: 100%;
+        margin: 0 auto;
+
+        .col {
+            width: 25%;
+            text-align: left;
+        }
+
+        .col-1 {
+            @include fonts($f-monst-regul, 16px, 400, 19.5px, $color-red);
+            text-transform: uppercase;
+            padding-left: 39px;
+        }
+
+        .col-2>ul:nth-last-child(-n+6) {
+            @include fonts($f-roboto-light, 14px, 300, 26px, $text-grej-more);
+            padding-left: 73px;
+
+            li:nth-child(1) {
+                @include fonts($f-monst-bold, 14px, 700, 17.07px, $text-black );
+                padding-bottom: 11px;
+            }
+        }
+
+        .col-3>ul>li:nth-child(n) {
+            @include fonts($f-monst-bold, 14px, 700, 17.07px, $text-black );
+            padding-left: 51px;
+        }
+
+        .col-4 {
+            text-align: center;
+
+            ul>li:nth-child(1) {
+                @include fonts($f-monst-bold, 10px, 700, 12.19px, rgba(204, 204, 204, 1));
+                letter-spacing: 1px;
+                padding-left: 35px;
+                text-transform: uppercase;
+            }
+
+            .areto {
+                width: 110px;
+                height: 24px;
+                margin: 7px 0 0 42px;
+            }
+        }
+    }
+}
+
+@media (max-width:320px) {
+    .navbar {
+        width: 100%;
+        height: 540px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        background-image: url('../images/Bitmap-phone.png');
+
+        ::after {
+            content: "";
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: 540px;
+            border-radius: 4px;
+            z-index: -2;
+            background: rgba(0, 0, 0, 1);
+            opacity: 0.8;
+        }
+
+        &__menu {
+            width: 80%;
+            height: 157px;
+            display: flex;
+            justify-content: space-between;
+            flex-direction: column-reverse;
+            align-items: center;
+            clear: both;
+            margin: 20px auto 27px;
+            padding: 0 0px 0 0px;
+
+            .navigation {
+                display: block;
+                justify-content: center;
+                align-items: center;
+                @include fonts($f-monst-bold, 20px, 700, 24.38px, $text-white);
+            }
+
+            .wrapper {
+                width: 152px;
+                display: flex;
+                justify-content: space-between;
+
+                &__login,
+                &__signup {
+                    width: max-content;
+                    @include fonts($f-monst-regul, 14px, 400, 17.7px, $text-white);
+                    cursor: pointer;
+                    transition-duration: 0.5ms;
+
+                    &:hover {
+                        color: rgb(248, 208, 156);
+                    }
+                }
+
+                &__signup {
+                    display: flex;
+                    align-items: center;
+                    border: 2px solid $text-white;
+                    border-radius: $br-radius;
+                    padding: 8px 16px;
+                }
+
+                &__login {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+            }
+        }
+
+        &__text {
+            text-align: center;
+
+            .text-1 {
+                @include fonts($f-monst-bold, 30px, 700, 36.57px, $text-white );
+                text-align: center;
+            }
+
+            .text-2 {
+                width: 280px;
+                @include fonts($f-roboto-light, 18px, 300, 24.5px, $text-white );
+                text-align: center;
+                margin: 6px auto 15px;
+                padding-left: 0px;
+            }
+
+            .btn {
+                width: 280px;
+                height: 40px;
+                @include fonts($f-monst-bold, 14px, 700, 17.07px, $text-white );
+                background-color: $color-red;
+                border-radius: $br-radius;
+                text-align: center;
+                transition-duration: 0.4ms;
+
+                &:hover {
+                    background-color: rgb(246, 63, 66);
+                    color: rgb(248, 208, 156);
+                }
+            }
+        }
+    }
+
+    // <Meet a partner for your best holiday>
+    .card {
+        width: 100%;
+        height: 781px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        flex-direction: column;
+        margin: 33px auto 38px;
+
+        &_name {
+            display: block;
+            width: 100%;
+            @include fonts($f-monst-bold, 22px, 700, 26.82px, rgba(68, 68, 68, 1));
+            text-align: center;
+            clear: both;
+            margin: 0 auto 8px;
+        }
+
+        &__card-1,
+        &__card-2,
+        &__card-3 {
+            width: 94%;
+            height: 240px;
+            background-image: url('../images/Bitmap step-1-phone.png.png'), ;
+            background-repeat: no-repeat;
+            background-size: 100%;
+            background-position: center;
+            flex-direction: column;
+            padding: 0 29px 16px 20px;
+            margin: 0 auto;
+        }
+
+        &__card-1 {
+            background-image: url('../images/Bitmap step-1-phone.png');
+
+            .card-text-1 {
+                margin: 47px 0 24px;
+            }
+        }
+
+        &__card-2 {
+            background-image: url('../images/Bitmap step-2-phone.png');
+
+            .card-text-1 {
+                margin: 30px 0 22px;
+            }
+        }
+
+        &__card-3 {
+            background-image: url('../images/Bitmap step-3-phone.png');
+            padding: 0 29px 14px 20px;
+
+            .card-text-1 {
+                margin: 44px 0 25px;
+            }
+        }
+    }
+
+    .card-text-1 {
+        @include fonts($f-monst-bold, 24px, 700, 14px, $text-white );
+    }
+
+    .card-text-2 {
+        @include fonts($f-roboto-light, 14px, 300, 14px, $text-grej);
+    }
+
+    .card-btn {
+        width: 70px;
+        height: 20px;
+        @include fonts($f-monst-regul, 10px, 400, 12.19px, $text-white );
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        background-color: $color-red;
+        border-radius: $br-radius;
+        text-align: center;
+        cursor: pointer;
+    }
+
+    .card-img {
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        position: relative;
+    }
+
+    // <div class="card_name-meet">Meet a partner for your best holiday</div>
+    .width {
+        width: 82%;
+        height: 888px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-content: space-between;
+        margin: 14px auto 36px;
+
+        .brendon_1,
+        .marie_2,
+        .diana_3,
+        .christopher_4 {
+            width: 100%;
+            height: 205px;
+            position: relative;
+            text-align: center;
+
+            ::after {
+                content: '';
+                position: absolute;
+                display: block;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 38px;
+                height: 38px;
+                right: 26%;
+                bottom: 40%;
+                background-color: rgb(255, 78, 80);
+                border: 4px solid #fff;
+                border-radius: 50%;
+            }
+        }
+
+        .last-name {
+            @include fonts($f-monst-bold, 14px, 700, 17.07px, $text-black);
+            margin: 19px 0 22px
+        }
+
+        .brendon_1 {
+
+            ::after {
+                content: url('../images/music1.png');
+            }
+        }
+
+        .marie_2 {
+            margin-top: 16px;
+
+            ::after {
+                content: url('../images/brush-2.png');
+                background-color: rgba(25, 212, 202, 1);
+            }
+        }
+
+        .diana_3 {
+            .hobby {
+                margin: 0 16px;
+            }
+
+            .last-name {
+                margin-bottom: 26px;
+            }
+
+            ::after {
+                content: url('../images/camera-3.png');
+                background-color: rgba(255, 167, 16, 1);
+            }
+        }
+
+        .christopher_4 {
+            padding-left: 0px;
+
+            .last-name {
+                margin-bottom: 21px;
+                padding-left: 0px;
+            }
+
+            ::after {
+                content: url('../images/airplane-4.png');
+                background-color: rgba(102, 125, 243, 1);
+            }
+        }
+    }
+
+    .hobby {
+        margin: 0 13.850000000000001px;
+    }
+
+    .btn-perent {
+        width: 280px;
+        height: 40px;
+        @include fonts($f-monst-bold, 14px, 700, 17.07px, $text-white );
+        border: 2px solid $color-red;
+        border-radius: $br-radius;
+        text-align: center;
+        color: $color-red;
+        transition-duration: 0.9ms;
+        transition-property: all;
+        margin: 0 0 15px;
+
+        &:hover {
+            background-color: rgb(255, 247, 247);
+            color: rgb(248, 208, 156);
+        }
+    }
+
+    // <section class="holiday">
+    .holyday .width .card_name {
+        width: 60%;
+    }
+
+    .holyday .width {
+        height: 1002px !important;
+    }
+
+    .holyday {
+        height: 988px;
+
+        .mb-10 {
+            margin-bottom: 21px !important;
+        }
+
+        figure {
+            position: relative;
+            z-index: 2;
+
+            .z-index {
+                @include fonts($f-monst-bold, 22px, 700, 26.82px, $text-white );
+                position: absolute;
+                top: 45%;
+                left: 40%;
+                z-index: 4;
+            }
+        }
+
+        *.discover-img {
+            width: 94%;
+            height: 120px;
+            margin: 0 auto;
+        }
+
+        .discover-img_1 {
+            background-image: url('../images/discover-sport-1-phone.png');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: contain;
+
+            .z-index {
+                width: 206px;
+                text-align: center;
+                left: 16%;
+                top: 18%;
+            }
+        }
+
+        .discover-img_2 {
+            background-image: url('../images/discover-willnes-phone.png');
+            background-repeat: no-repeat;
+            background-position: 61%;
+
+            .z-index {
+                width: 206px;
+                text-align: center;
+                left: 16%;
+                top: 28%;
+            }
+        }
+
+        .discover-img_3 {
+            background-image: url('../images/discover-extreme-3-phone.png');
+            background-repeat: no-repeat;
+            background-position: 33%;
+
+            .z-index {
+                width: 187px;
+                height: 54px;
+                text-align: center;
+                top: 28%;
+                left: 19%;
+            }
+        }
+
+        .discover-img_4 {
+            background-image: url('../images/discover-game-4-phone.png');
+            background-repeat: no-repeat;
+            background-position: 48%;
+
+            .z-index {
+                top: 39%;
+                left: 37%;
+            }
+        }
+
+        .discover-img_5 {
+            background-image: url('../images/discover-culture-5-phone.png');
+            background-repeat: no-repeat;
+            background-position: 55%;
+
+            .z-index {
+                top: 38%;
+                left: 7%;
+            }
+        }
+
+        .discover-img_6 {
+            background-image: url('../images/discover-enjomet-6-phone.png');
+            background-repeat: no-repeat;
+            background-position: -1%;
+
+            .z-index {
+                top: 37%;
+                left: 4%;
+            }
+        }
+
+        .discover-img_7 {
+            background-image: url('../images/discover-trevelling-7-phone.png');
+            background-repeat: no-repeat;
+            background-position: 61%;
+
+            .z-index {
+                top: 36.5%;
+                left: 31%;
+            }
+        }
+    }
+
+    // <section class="input">
+    .input {
+        width: 280px;
+        height: 192px;
+        text-align: center;
+        margin: 39px auto 41px;
+
+        &_text {
+            @include fonts($f-roboto-light, 18px, 300, 14px, rgba(102, 102, 102, 1));
+            margin: 21px 0 15px;
+            text-align: center
+        }
+
+        &_text-center {
+            height: 90px;
+            display: flex;
+            justify-content: space-between;
+            flex-direction: column;
+            flex-wrap: nowrap
+        }
+
+    }
+
+    .input-holiday {
+        @include fonts($f-roboto-light, 14px, 300, 16.41px, rgba(153, 153, 153, 1));
+        width: 280px;
+        height: 40px;
+        padding-left: 13px;
+        border: 1px solid rgba(0, 0, 0, 0.07);
+    }
+
+    .btn-holiday {
+        width: 280px;
+        height: 40px;
+        @include fonts($f-monst-bold, 14px, 700, 17.07px, $text-white );
+        border: 2px solid $color-red;
+        border-radius: $br-radius;
+        text-align: center;
+        background-color: $color-red;
+        color: $color-255;
+        transition-duration: 0.9ms;
+        transition-property: all;
+        padding-left: 10px;
+
+        :hover {
+            color: red;
+        }
+    }
+
+    hr {
+        margin: 0px 0 19px;
+        border: 1px solid red;
+    }
+
+    // <footer class="d-flex ">
+    footer {
+        height: 226px;
+        width: 65.8%;
+        margin: 0 auto;
+
+        .col {
+            width: 100%;
+            text-align: center;
+        }
+
+        .col-1 {
+            height: 29px;
+            padding-left: 0px;
+        }
+
+        .col-2>ul:nth-last-child(-n+6) {
+            padding-left: 0px;
+
+            li:nth-child(1) {
+                margin: 0 0 !important;
+                padding-bottom: 0px;
+                width: 100%;
+            }
+
+            li:nth-child(n) {
+                display: inline-block;
+                margin: 0 5px;
+            }
+        }
+
+        .col-3>ul>li:nth-child(n) {
+            @include fonts($f-monst-bold, 14px, 700, 17.07px, $text-black );
+            padding-left: 0px;
+        }
+
+        .col-4 {
+            text-align: center;
+            margin-top: 16px;
+
+            ul>li:nth-child(1) {
+                @include fonts($f-monst-bold, 10px, 700, 12.19px, rgba(204, 204, 204, 1));
+                letter-spacing: 1px;
+                text-transform: uppercase;
+                padding-left: 0;
+            }
+
+            .areto {
+                width: 110px;
+                height: 24px;
+                margin: 7px 0 0 50px;
+            }
+        }
+    }
+
+    .d-flex {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column !important;
+        align-content: center !important;
+    }
+}
